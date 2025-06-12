@@ -9,6 +9,7 @@ import CourseDetails from './Screens/CourseDetails';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ChapterScreen from './Screens/ChapterScreen';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -34,6 +35,9 @@ export default function App() {
           headerShown: true
         }}/>
             <Stack.Screen name="CourseDetailsScreen" component={CourseDetails} options={{
+          title : ''
+        }}/>
+        <Stack.Screen name="ChapterScreen" component={ChapterScreen} options={{
           title : ''
         }}/>
           </Stack.Navigator>

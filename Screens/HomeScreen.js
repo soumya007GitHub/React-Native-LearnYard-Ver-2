@@ -51,9 +51,9 @@ useLayoutEffect(() => {
       <Slider />
       <VideoCourseList />
       {/* Course of all basic types */}
-      <CourseList isBasic={true} />
+      <CourseList isBasic={true} title={"Basic Courses"}/>
       {/* Course of all not basic types */}
-      <CourseList isBasic={false} />
+      <CourseList isBasic={false} title={"Advanced Courses"}/>
       <View style={styles.footer}>
         <Text style={{ fontSize: 15, color: 'gray' }}>Made with <Entypo name="heart" size={15} color="red" /> by Soumya</Text>
       </View>

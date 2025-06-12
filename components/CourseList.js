@@ -8,6 +8,7 @@ const Stack = createNativeStackNavigator();
 export default function CourseList(props) {
   const Navigation = useNavigation();
   const isBasic = props.isBasic;
+  const title = props.title;
   const [fetchedData, setFetchedData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -24,7 +25,7 @@ export default function CourseList(props) {
       isBasic: item.isBasic,
       description: item.description,
       imageUrl: item.image[0].formats.thumbnail.url,
-      topic: item.Topic
+      topic: item.Topic,
     }));
 
     setFetchedData(resp);
@@ -32,7 +33,7 @@ export default function CourseList(props) {
   };
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Available Courses</Text>
+      <Text style={styles.text}>{title}</Text>
       {isLoading ? <ActivityIndicator size="50" /> : <FlatList
         horizontal={true}
         showsHorizontalScrollIndicator={false}
@@ -48,6 +49,7 @@ export default function CourseList(props) {
             }}
           />
           <Text style={styles.courseText}>{item.name}</Text>
+          <Text>{item.topic.length} Chapters</Text>
         </TouchableOpacity>}
         keyExtractor={item => item.id}
       />}
