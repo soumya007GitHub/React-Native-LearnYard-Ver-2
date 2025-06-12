@@ -8,11 +8,13 @@ import { AuthContext } from '../Context/AuthContext';
 import Services from '../Shared/Services';
 
 GoogleSignin.configure({
-  webClientId: '1059491022178-r0s1c7te41iift3tqiacpns68aa9c5p5.apps.googleusercontent.com',
+  webClientId: '',
+  // Add yours
   scopes: ['profile', 'email'],
   offlineAccess: true,
   forceCodeForRefreshToken: false,
-  iosClientId: '1059491022178-qvrg2gnc2eoqsgjo59g8h7p4m9p3tbof.apps.googleusercontent.com',
+  iosClientId: '',
+  // Add yours
 });
 
 export default function LoginScreen() {
