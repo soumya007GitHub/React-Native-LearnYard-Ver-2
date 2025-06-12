@@ -24,6 +24,7 @@ useLayoutEffect(() => {
     navigation.setOptions({
       headerStyle: {
             backgroundColor: '#4da8da',
+            // backgroundColor: '#fff'
           },
       headerTitle: () => (
         <View>

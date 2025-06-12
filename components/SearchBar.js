@@ -24,11 +24,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     padding: 5,
-    gap: 10
+    gap: 10,
+    backgroundColor: '#EBEBEB',
   },
   inputField: {
     height: 40,
     fontSize: 15,
-    width: Dimensions.get('screen').width*0.8
+    width: Dimensions.get('screen').width*0.8,
+    color: '#000',
   }
 })
